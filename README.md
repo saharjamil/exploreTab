@@ -2,6 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.16.
 
+<table>
+  <tr> 
+    <td> <img src="./assets/images/shot.png" alt="ExploreTab Screenshot" width="100%" /> </td> 
+    <td style="vertical-align: top; padding-left: 20px;"> 
+      <h3>✨ Key Features</h3> 
+      <ul> 
+        <li>🔥 Modular Angular architecture</li> 
+        <li>🔍 Interactive tab exploration UI</li>  
+        <li>🎨 Responsive and clean UI</li>
+      </ul> 
+    </td> 
+  </tr> 
+</table>
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
