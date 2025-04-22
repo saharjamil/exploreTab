@@ -1,7 +1,7 @@
 # ExploreTab
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.16.
-
+"If you find this project useful, please consider giving it a ⭐️!"
 <table>
   <tr> 
     <td style="vertical-align: top; padding-left: 20px;"> 
