@@ -9,7 +9,7 @@
         border-radius: 15px;
     }
     .explore-tab-content{
-        min-height: calc(100dvh - (var(--fixedHeight) * 2 + 1.5rem + var(--chromeTabsHeight) + 4px));
+        min-height: calc(100dvh - (var(--fixedHeight) + 1rem + var(--chromeTabsHeight) + 4px));
             display: flex;
             flex-direction: column;
             > * {
@@ -206,7 +206,13 @@
             margin-top: 0.5rem;
         }
     }
-}   
+}  
+
+@media screen and (max-width:767px) {
+    .explore-tab-content{
+        min-height: unset !important;
+    }
+}
 
 
 

@@ -150,7 +150,7 @@ table.custom-table-style {
   td {
     text-align: right;
     vertical-align: middle;
-    padding: 0.5rem;
+    padding:0.25rem 0.5rem;
 
     &:first-child {
       padding-right: 20px //TODO: check side effect;
