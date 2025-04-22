@@ -1,1 +1,194 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face {
+  font-family: "IranYekan";
+  src: url("./assets/Fonts/IranYekan/iran-yekan-300.eot");
+  src: url("./assets/Fonts/IranYekan/iran-yekan-300.eot?#iefix") format("embedded-opentype"),
+    url("./assets/Fonts/IranYekan/iran-yekan-300.woff2") format("woff2"),
+    url("./assets/Fonts/IranYekan/iran-yekan-300.woff") format("woff"),
+    url("./assets/Fonts/IranYekan/iran-yekan-300.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "IranYekan";
+  src: url("./assets/Fonts/IranYekan/iran-yekan-400.eot");
+  src: url("./assets/Fonts/IranYekan/iran-yekan-400.eot?#iefix") format("embedded-opentype"),
+    url("./assets/Fonts/IranYekan/iran-yekan-400.woff2") format("woff2"),
+    url("./assets/Fonts/IranYekan/iran-yekan-400.woff") format("woff"),
+    url("./assets/Fonts/IranYekan/iran-yekan-400.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "IranYekan";
+  src: url("./assets/Fonts/IranYekan/iran-yekan-500.eot");
+  src: url("./assets/Fonts/IranYekan/iran-yekan-500.eot?#iefix") format("embedded-opentype"),
+    url("./assets/Fonts/IranYekan/iran-yekan-500.woff2") format("woff2"),
+    url("./assets/Fonts/IranYekan/iran-yekan-500.woff") format("woff"),
+    url("./assets/Fonts/IranYekan/iran-yekan-500.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "IranYekan";
+  src: url("./assets/Fonts/IranYekan/iran-yekan-700.eot");
+  src: url("./assets/Fonts/IranYekan/iran-yekan-700.eot?#iefix") format("embedded-opentype"),
+    url("./assets/Fonts/IranYekan/iran-yekan-700.woff2") format("woff2"),
+    url("./assets/Fonts/IranYekan/iran-yekan-700.woff") format("woff"),
+    url("./assets/Fonts/IranYekan/iran-yekan-700.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "IranYekan";
+  src: url("./assets/Fonts/IranYekan/woff2/IRANYekanWebExtraBold.woff2");
+  src: url("./assets/Fonts/IranYekan/eot/IRANYekanWebExtraBold.eot") format("embedded-opentype"),
+    url("./assets/Fonts/IranYekan/woff2/IRANYekanWebExtraBold.woff2") format("woff2"),
+    url("./assets/Fonts/IranYekan/woff/IRANYekanWebExtraBold.woff") format("woff"),
+    url("./assets/Fonts/IranYekan/ttf/IRANYekanWebExtraBold.ttf") format("truetype");
+  font-weight: 900;
+}
+
+body {
+  direction: rtl;
+  color: var(--gray-700);
+  margin: 0;
+  font-family: IranYekan;
+  font-weight: 300;
+}
+
+.container-fluid {
+  padding: 1rem;
+}
+
+i {
+  line-height: 0;
+}
+p{
+  line-height: 2.5;
+}
+h3{
+  border-bottom: 1px solid color-mix(in srgb, var(--theme-default) 30%, transparent);
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  i{
+      font-size: 1.7rem;
+      margin-left: 0.5rem;
+  }
+}
+.table-responsive{
+  overflow-x: auto;
+}
+table.custom-table-style {
+  border-collapse: separate;
+  border-spacing: 0 0.75rem;
+  max-width: calc(100% - 1px);
+  width: 100%;
+
+  thead {
+    tr {
+      height: 50px;
+    }
+  }
+
+  tr {
+    &.spacer {
+      height: 8px;
+    }
+  }
+
+  th {
+    background-color: color-mix(in srgb, var(--theme-default) 8%, #fff 100%);
+    border-top: 1px solid color-mix(in srgb, var(--theme-default) 20%, #fff 80%);
+    border-bottom: 1px solid color-mix(in srgb, var(--theme-default) 20%, #fff 80%);
+    font-weight: 500;
+    font-size: 1.1rem;
+    max-width: calc(100% - 1px);
+
+    &:first-child {
+      border-right: 1px solid color-mix(in srgb, var(--theme-default) 20%, #fff 80%);
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 10px;
+
+    }
+
+    &:last-child {
+      border-left: 1px solid color-mix(in srgb, var(--theme-default) 20%, #fff 80%);
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+
+  td {
+
+    border-top: 1px solid color-mix(in srgb, var(--theme-default) 20%, #fff 80%);
+    border-bottom: 1px solid color-mix(in srgb, var(--theme-default) 20%, #fff 80%);
+    height: 40px;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+
+    &:first-child {
+      border-right: 1px solid color-mix(in srgb, var(--theme-default) 20%, #fff 80%);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+    }
+
+    &:last-child {
+      border-left: 1px solid color-mix(in srgb, var(--theme-default) 20%, #fff 80%);
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+  }
+
+  th,
+  td {
+    text-align: right;
+    vertical-align: middle;
+    padding: 0.5rem;
+
+    &:first-child {
+      padding-right: 20px //TODO: check side effect;
+    }
+
+    &.index {
+      max-width: 70px;
+      width: 70px;
+    }
+  }
+
+  th {
+    color: var(--gray-600);
+    font-size: 0.9rem;
+
+  }
+}
+
+.btn {
+  background-color: color-mix(in srgb, var(--theme-default) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--theme-default) 40%, transparent);
+  padding: 0.25rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  font-family: inherit;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--theme-default) 20%, transparent);
+    border-color: color-mix(in srgb, var(--theme-default) 60%, transparent);
+  }
+
+  i {
+    margin-right: 0.5rem;
+  }
+
+}

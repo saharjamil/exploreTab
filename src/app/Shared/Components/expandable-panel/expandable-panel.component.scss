@@ -1,0 +1,12 @@
+.expandable-panel {
+    position: fixed;
+    background: white;
+    border: 1px solid currentColor;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    transition: all ease 0.3s;
+    overflow: hidden;
+    z-index: 1000;
+    transform-origin: top;
+    border-radius: 15px;
+    // min-width:300px
+  }

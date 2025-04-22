@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="table-responsive">
+        <table class="custom-table-style">
+            <thead>
+                <tr>
+                    <th>ردیف</th>
+                    <th>نام کاربری</th>
+                    <th>نام و نام خانوادگی</th>
+                    <th>شماره همراه</th>
+                    <th>ایمیل</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of userList; let i = index;">
+                    <td>{{i + 1}}</td>
+                    <td>{{item.UserName}}</td>
+                    <td>{{item.FullName}}</td>
+                    <td>{{item.PhoneNumber}}</td>
+                    <td>{{item.Email}}</td>
+                    <td><button class="btn" (click)="onUserSelected(item)">جزئیات <i class="bi bi-chevron-left"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

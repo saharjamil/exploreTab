@@ -1,0 +1,5 @@
+<div class="expandable-panel" [@slideDown] [style.top.px]="position?.top" [style.bottom.px]="position?.bottom" [style.left.px]="position?.left" [style.right.px]="position?.right" [style.border-color]="borderColor" [style.min-width.px]="minWidth">
+  <ngx-simplebar style="max-height: 500px;">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </ngx-simplebar>
+</div>

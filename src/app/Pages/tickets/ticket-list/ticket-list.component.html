@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="table-responsive">
+        <table class="custom-table-style">
+            <thead>
+                <tr>
+                    <th>ردیف</th>
+                    <th>کد رهگیری</th>
+                    <th>عنوان تیکت</th>
+                    <th>ایجاد کننده تیکت</th>
+                    <th>تاریخ و ساعت ایجاد</th>
+                    <th>اولویت</th>
+                    <th>وضعیت</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of ticketList; let i = index;">
+                    <td>{{i + 1}}</td>
+                    <td>{{item.TrackingCode}}</td>
+                    <td>{{item.Subject}}</td>
+                    <td>{{item.CreatorFullName}}</td>
+                    <td>{{item.CreationDateTime}}</td>
+                    <td>{{item.PriorityTypeTitle}}</td>
+                    <td>{{item.StatusTypeTitle}}</td>
+                    <td><button class="btn" (click)="onTicketSelected(item)">جزئیات <i class="bi bi-chevron-left"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

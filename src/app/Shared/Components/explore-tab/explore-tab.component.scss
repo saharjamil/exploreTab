@@ -1,0 +1,212 @@
+:host{
+    --chromeTabsHeight: 46px;
+    --chromeTabsBackgroundColor: color-mix(in srgb, var(--theme-default) 2%, #000 8%);
+}
+.tabular-container{
+    &.bordered-box{
+        border: 1px solid #d2d2d2;
+        border-top-color: var(--chromeTabsBackgroundColor);;
+        border-radius: 15px;
+    }
+    .explore-tab-content{
+        min-height: calc(100dvh - (var(--fixedHeight) * 2 + 1.5rem + var(--chromeTabsHeight) + 4px));
+            display: flex;
+            flex-direction: column;
+            > * {
+                flex-grow: 1;
+                display:flex !important;
+                flex-direction:column;
+            }
+    }
+    .chrome-tabs {
+        box-sizing: border-box;
+        position: relative;
+        font-size: 0.9rem;
+        height: var(--chromeTabsHeight);
+        padding: 8px 10px 4px 40px;
+        background: var(--chromeTabsBackgroundColor);
+        border-radius: 5px 5px 0 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        .chrome-tabs-content{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            
+            .chrome-tab{
+                position: relative;
+                height: 100%;
+                border: 0;
+                margin: 0;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                padding: 0 1rem;
+                cursor: pointer;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                overflow: hidden;
+                flex-grow: 1;
+                flex-basis: 30%;
+                max-width: 150px;
+                min-width: 100px;
+                column-gap: 0.2rem !important;
+                &:hover{
+                    background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><symbol id="chrome-tab-geometry" viewBox="0 0 214 36"><path d="M17 0h197v36H0v-2c4.5 0 9-3.5 9-8V8c0-4.5 3.5-8 8-8z"></path></symbol></defs><svg width="52%" height="100%"><use href="%23chrome-tab-geometry" width="214" height="36" class="chrome-tab-geometry" fill="%23edeff3"></use></svg><g transform="scale(-1, 1)"><svg width="52%" height="100%" x="-100%" y="0"><use href="%23chrome-tab-geometry" width="214" height="36" class="chrome-tab-geometry" fill="%23edeff3"></use></svg></g></svg>');
+                    & + .chrome-tab{
+                        &::before{
+                            content: none !important;
+                        }
+                    }
+                }
+                .tab-icon{
+                    font-size: 1rem;
+                    line-height: 0;
+                }
+                .close-tab{
+                    line-height: 0;
+                    margin: 0 0.2rem;
+                    
+                }
+                .tab-title{
+                    max-width: 100%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    flex-grow: 1;
+                    font-weight: 400;
+                    color: var(--gray-700);
+                }
+                & + .chrome-tab{
+                    &:before{
+                        content: '';
+                        width: 1px;
+                        height: 17px;
+                        background: #c9cbcc;
+                        position: absolute;
+                        right: 6px;
+                    }
+    
+                  
+                }
+                &.active{
+                    background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><symbol id="chrome-tab-geometry" viewBox="0 0 214 36"><path d="M17 0h197v36H0v-2c4.5 0 9-3.5 9-8V8c0-4.5 3.5-8 8-8z"></path></symbol></defs><svg width="52%" height="100%"><use href="%23chrome-tab-geometry" width="214" height="36" class="chrome-tab-geometry" fill="%23fff"></use></svg><g transform="scale(-1, 1)"><svg width="52%" height="100%" x="-100%" y="0"><use href="%23chrome-tab-geometry" width="214" height="36" class="chrome-tab-geometry" fill="%23fff"></use></svg></g></svg>');
+                    &:before{
+                        content: none !important;
+                    }
+                    & ~ .chrome-tab{
+                        &:before{
+                            content: none !important;
+                        }
+                        &:after{
+                            content: '';
+                            width: 1px;
+                            height: 17px;
+                            background: #c9cbcc;
+                            position: absolute;
+                            left: 0;
+                        }
+    
+                    }
+                } 
+                
+            }
+        }    
+        .show-tabs-list-btn{
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 26px;
+            height: 26px;
+            background-color: #fff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            i{
+                pointer-events: none;
+            }
+        }
+        .chrome-tabs-bottom-bar{
+            position: absolute;
+            bottom: 0;
+            height: 4px;
+            left: 0;
+            width: 100%;
+            background: #fff;
+        }
+        
+        
+                     
+    
+    
+    
+    }
+}
+.action-menu{
+    padding: 0.25rem;
+    // min-width: 250px;
+    .item {
+        padding: 0.5rem !important;
+        cursor: pointer;
+        font-size: 0.9rem;
+        font-weight: 400;
+        transition: all ease 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 12px;
+        position: relative;
+        
+        .title{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            overflow: hidden;
+            .tab-title{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        .close-tab{
+            line-height: 0;
+            transition: all ease 0.3s;
+            i {
+                font-size: 0.9rem;
+                margin-left: 0;
+            }
+            &:hover{
+                color: var(--danger);
+            }
+        }
+        &:not(:last-child){
+            &:after{
+            content: '';
+            width: 100%;
+            height: 1px;
+            display: block;
+            background-color: rgba(var(--theme-default),0.08);
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+        }
+        }
+        &:hover {
+            background-color: color-mix(in srgb, var(--theme-default) 10%, transparent);
+            color: var(--theme-default);
+        }
+        
+        & + .item{
+            margin-top: 0.5rem;
+        }
+    }
+}   
+
+
+
