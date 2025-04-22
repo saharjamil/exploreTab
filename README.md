@@ -4,7 +4,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 <table>
   <tr> 
-    <td> <img src="./assets/images/shot.png" alt="ExploreTab Screenshot" width="100%" /> </td> 
     <td style="vertical-align: top; padding-left: 20px;"> 
       <h3>✨ Key Features</h3> 
       <ul> 
@@ -13,6 +12,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
         <li>🎨 Responsive and clean UI</li>
       </ul> 
     </td> 
+    <td> <img src="./assets/images/shot.png" alt="ExploreTab Screenshot" width="100%" /> </td> 
+    
   </tr> 
 </table>
 
