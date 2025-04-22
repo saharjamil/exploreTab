@@ -43,7 +43,6 @@ export class ExploreTabsService {
   }
   // Open a tab request for a specific key
   openTab(key: string, tab: TabInterface): void {
-    const currentTabsCount = this.getTabs(key).value.length;
     if (!this.openTabRequests.has(key)) {
       this.openTabRequests.set(key, new Subject<TabInterface>());
     }
@@ -65,13 +64,7 @@ export class ExploreTabsService {
  
   selectTab(key: string, tab: TabInterface, viewContainerRef: ViewContainerRef) {
     const tabsSource = this.getTabs(key);
-    const currentTabs = [...tabsSource.value];
-    const activeTab = currentTabs.find((t) => t.active);
-    // Save scroll position for the current active tab -- just ticket detail component need to save scroll position
-    if (activeTab) {
-      const activeComponent = this.getComponentRef(key,+activeTab.id);
-      activeComponent?.instance?.saveScrollPosition?.();
-    }
+    const currentTabs = [...tabsSource.value];  
     //Deactive all tabs
     currentTabs.forEach((t) => (t.active = false));
     // Check if the tab already exists
@@ -93,15 +86,6 @@ export class ExploreTabsService {
     if (existingComponent && !existingComponent.hostView.destroyed) {
       // Reuse existing cached component's view if it's already created
       this.getTabContentRef(key)?.insert(existingComponent.hostView);
-      //Refresh existingComponent (related to ticket detail component)
-      if (typeof existingComponent.instance.needToRefresh === 'function') {
-        existingComponent.instance.needToRefresh();
-      }
-      // Restore scroll position (related to ticket detail component)
-      if (typeof existingComponent.instance.restoreScrollPosition === 'function') {
-        existingComponent.instance.restoreScrollPosition();
-      }
-      
     } else {
       // Create a new component
       if (tab.componentRef) {
@@ -112,7 +96,6 @@ export class ExploreTabsService {
         this.storeComponentRef(key, +tab.id, newComponent);
       }
     }
-    
     tabsSource.next(currentTabs);
   }
 // Helper methods for component references
