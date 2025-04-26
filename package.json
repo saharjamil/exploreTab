@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build --base-href /eploreTab/",
     "watch": "ng build --watch --configuration development",
-    "deploy": "npm run build && gh-pages -d dist/explore-tab",
+    "deploy": "npm run build && gh-pages -d dist/exploreTab",
     "test": "ng test"
   },
   "private": true,
