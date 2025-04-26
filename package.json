@@ -4,10 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href /eploreTab/",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "deploy": "ng build --configuration production --base-href /exploreTab/ && gh-pages -d dist/exploreTab",
-
+     "deploy": "ng build --configuration production --aot && gh-pages -d dist/exploreTab",
     "test": "ng test"
   },
   "private": true,
