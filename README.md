@@ -1,7 +1,9 @@
 # ExploreTab
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.16.
+
 See Demo https://saharjamil.github.io/exploreTab/
+
 "If you find this project useful, please consider giving it a ⭐️!"
 <table>
   <tr> 
